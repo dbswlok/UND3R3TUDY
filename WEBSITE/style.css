@@ -1,0 +1,846 @@
+@font-face {
+    font-family: 'Archive type archive antique extended';
+    src: url('./_fonts/Archive-Type---Archive-Antique-Extended.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Gotham A';
+    src: url('./_fonts/gotham-bold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Gotham B';
+    src: url('./_fonts/Gotham-Book.otf') format('truetype');
+}
+@font-face {
+    font-family: 'webflow-icons';
+    src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="w-icon-"],
+[class*=" w-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'webflow-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    font-size: 14px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+    font-family: Montserrat, sans-serif;
+    color: #fff;
+    line-height: 1.2rem;
+    font-family: 'Gotham A', 'Gotham B', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* header - nav */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 4000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding: 0 1.5rem;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 2px solid #c9c9c9;
+    background-color: #000;
+}
+
+.home-btn {
+    display: flex;
+    gap: 3rem;
+}
+
+.home-btn a {
+    display: block;
+    line-height: 1em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff;
+    font-size: 1rem;
+    -webkit-transition: color 200ms ease, text-shadow 200ms ease;
+    transition: color 200ms ease, text-shadow 200ms ease;
+    font-family: 'Gotham A', 'Gotham B', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0 0 0 #000;
+}
+
+.home-btn a:hover, 
+.UNDSTD-link:hover {
+    font-size:110%;
+    color: #ffffff;
+    text-shadow: 0 0 .325rem #dbffff, 0 0 .325rem #014e58;
+    transform: none !important;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+}
+
+
+.tickets-btn {
+    width: 100%;
+    max-width: 160px;
+}
+
+.tickets-btn a {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 40px;
+    margin-top: 0px;
+    margin-right: 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid #ffde7b;
+    background-color: #ff0003;
+    -webkit-box-shadow: 0 0 25px 0 transparent, 0 0 0 0 transparent;
+    box-shadow: 0 0 25px 0 transparent, 0 0 0 0 transparent;
+    opacity: .85;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    letter-spacing: .5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    flex-shrink: 1
+}
+
+.tickets-btn a span {
+    margin-right: 4px;
+}
+
+.home-logo-link {
+    display: flex;
+    max-width: 100%;
+    height: 50px;
+
+}
+
+.home-logo-link img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 299px;
+    margin-bottom: -2px;
+}
+
+/* main */
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(20px + 3.5rem);
+}
+
+.main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-imgs img, 
+.ticket-btn {margin: 0 auto;}
+
+.tit-img {
+    width: 76rem;
+}
+
+.info-img {
+    width: 57rem;
+    padding-right: 3rem;
+    margin-top: 5rem !important;
+}
+
+.info-img2 {
+    width: 40rem;
+    margin-top: 6rem !important;
+}
+
+.ticket-btn {
+    margin: 5rem 0 6.5rem;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.ticket-btn a {
+    width: 26rem;
+}
+
+.ticket-btn img {
+    width: 100%
+}
+
+/* video */
+.main-videos {
+    display: flex;
+    justify-content: center;
+    width: 33.5rem;
+    margin: 0 auto 7rem;
+}
+
+.main-videos img {
+    width: 100%;
+    height: intrinsic;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.main-videos img:hover {
+    opacity: 1;
+}
+
+.video-modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.video-modal.active {
+    display: block;
+}
+
+.video-modal iframe.video-thum0,
+.video-modal iframe.video-thum1,
+.video-modal iframe.video-thum2 {
+    display: none;
+}
+
+.video-modal iframe.active {
+    display: block;
+}
+
+/* video modal */
+.modal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    backdrop-filter: brightness(0.5);
+}
+
+.video-container {
+    width: 65rem;
+}
+
+.video-item {
+    width: 100%;
+    height: 0;
+    padding-top: calc(315 / 560 * 100%);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    font-size: 2rem;
+    font-family: emoji;
+    cursor: pointer;
+}
+
+/* youtube video */
+iframe {
+    position: absolute;
+    top: 12%;
+    left: 16%;
+    width: 65%;
+    height: 65%;
+}
+
+.slick-slider,
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev,
+.slick-next {
+    width: 3rem;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    opacity: 1;
+}
+
+.slick-prev img,
+.slick-next img {width: inherit;}
+
+.slick-prev {
+    left: 13rem;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 13rem;
+}
+
+.sub-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sub-img2 {
+    width: 68rem !important;
+    margin: 6rem 0;
+}
+
+.booking-info {
+    position: relative;
+}
+
+.sub-img3 {
+    position: absolute;
+    top: 23%;
+    left: calc((100% - 35%) / 2);
+    width: 35%;
+}
+
+.teaser_frame {width: 100%;}
+
+
+/* footer */
+footer {
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer div:nth-child(2) img {
+    width: 9rem;
+    margin-bottom: 2rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_info {
+    flex-direction: row;
+    margin-bottom: 0;
+}
+
+
+.underlogo {
+    margin-bottom: 1rem;
+}
+
+.underlogo img{
+    height: 30px;
+}
+
+.footer_info {
+    margin: 1rem;
+}
+
+.UNDSTD-link {
+    letter-spacing: 5px;
+    font-size: .95rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Gotham A', sans-serif;
+    padding: 0 1rem;
+    border-right: 1px solid #4b4025;
+    margin-bottom: .5rem;
+}
+
+.UNDSTD-link span {
+    letter-spacing: 0;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+.copyrights {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: .95rem;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+
+/*ABOUT*/
+#ABOUT {
+    margin: 3rem 0;
+}
+
+
+
+
+.ABOUT_cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+
+/* SEASONS */
+#SEASONS {
+    margin: 3rem 0;
+}
+
+.seasons-head {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 44vw;
+    gap: 7rem;
+    justify-content: center;
+}
+
+.seasons-head img {
+    margin: 0 auto;
+    display: block;
+}
+
+
+.SEASONS_cont {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.season{
+    margin:0 2rem 5rem; /*포스터 간격 */
+}
+
+.seasons-head>img {
+    width: 70%;
+}
+
+
+/* MD */
+#MD {
+    margin: 3rem 0;
+}
+
+.MD-head {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 44vw;
+    gap: 7rem;
+    justify-content: center;
+}
+
+.MD-head img {
+    margin: 0 auto;
+    display: block;
+}
+
+
+.MD_cont {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.MD{
+    margin:0 1rem 5rem; /*포스터 간격 */
+}
+
+.MD-head>img {
+    width: 70%;
+}
+
+/*Calandar*/
+
+.CALANDAR_Google{
+    margin: 50 auto;
+    display: block;
+}
+
+/* GREEN FAIRY */
+#FAIRY {
+    margin: 3rem 0 5rem;
+}
+
+.fairy-cont {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    gap: 7rem;
+    justify-content: center;
+}
+
+.fairy-cont img {
+    margin: 0 auto;
+    display: block;
+}
+
+.fairy-imgs {
+    all: inherit;
+    gap: 8rem;
+}
+
+.fairy-imgs img {
+    width: 95%;
+}
+
+.fairy-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.fairy-title img {
+    width: 75%;
+}
+
+.fairy-imgs>div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.fairy-btn {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.fairy-btn a {
+    display: block;
+}
+
+.fairy-btn img {
+    width: 100%;
+}
+
+@media (max-width: 1440px){
+    html, body {font-size: 1vw;}
+
+    /* header */
+    .tickets-btn a {
+        flex-flow: row nowrap;
+    }
+    
+    .home-logo-link {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 60px;
+        margin-bottom: 1px;
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    }
+
+    .tit-img {
+        width: 62rem;
+    }
+
+    .info-img {
+        width: 44rem;
+        margin-top: 1.5rem !important;
+    }
+
+    .info-img2 {
+        width: 30rem;
+        margin-top: 2rem !important;
+    }
+
+    .ticket-btn {
+        margin: 2.7rem 0 5.5rem;
+    }
+
+    .ticket-btn a {
+        width: 22rem;
+    }
+
+    .main-videos {
+        width: 25.5rem;
+    }
+    
+    .sub-img2 {
+        width: 46rem !important;
+        margin: 6rem 0;
+    }
+
+    /* footer */
+    footer {
+        padding: 4rem 0 4rem;
+    }
+
+    footer div:nth-child(2) img {
+        width: 11rem;
+    }
+
+    .underlogo {
+        margin-bottom: 15rem;
+    }
+
+    .UNDSTD-link {
+        border-right: 1px solid #4b4025;
+        margin-bottom: 1rem;
+    }
+
+    .UNDSTD-link:last-child {
+        border: none;
+    }
+
+    .seasons-head {
+        width: auto;
+    }
+    
+
+@media (max-width: 1024px) {
+    html, body {
+        font-size: 1.3vw;
+    }
+    
+    .slide-wrap, 
+    .slide-content {
+        width: 768px;
+    }
+
+    #SEASONS, #FAIRY {
+        margin: 0rem 0 2rem; 
+    }
+
+    .seasons-head { 
+        gap: 5rem;
+    }
+
+
+    .cast-imgs {
+        gap: 7rem;
+    }
+
+    .fairy-cont, 
+    .fairy-imgs {
+        gap: 6rem;
+    }
+
+    .fairy-title {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        font-size: 1.5vw;
+    }
+
+    .sns-link.pc {
+        display: none;
+    }
+
+    .sns-link.m {
+        display: block;
+    }
+
+    header {
+        height: 60px;
+    }
+
+    main {
+        margin-top: clac(60px + 1rem);
+    }
+
+   
+    
+    .home-logo-link {
+        display: flex;
+        max-width: 100%;
+        width: 50px;
+        height: 299px;
+        justify-content: flex-end;
+    }    
+
+    .home-logo-link img {
+        vertical-align: middle;
+        display: inline-block;
+        width: inherit;
+        margin-bottom: -1px;
+    }
+
+    .info-img {
+        width: 82%; 
+        padding-right: 0;
+    }
+
+    .info-img2 {
+        width: 51%;
+    }
+
+    .ticket-btn {
+        flex-direction: column;
+        gap: 1rem;
+        width: 43%;
+        margin-top: 4rem;
+    }
+
+    .ticket-btn a {
+        display: block;
+        width: 100%;
+    }
+ 
+    .main-videos {
+        flex-direction: column;
+        width: 47.5rem;
+    }
+    
+    .close-btn {
+        top: -4rem;
+        font-size: 3rem;
+    }
+
+    .footer_info {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    .UNDSTD-link {
+        border: none;
+        font-size: 1rem;
+    }
+    
+    .slick-prev {
+        left: 8rem;
+        z-index: 1;
+    }
+    .slick-next
+    {
+        right: 8rem;
+    }
+
+    .teaser_frame {
+        height: 80vw;
+        object-fit: cover;
+    }
+
+    .sub-img3 {
+        top: 21%;
+        left: calc((100% - 65%) / 2);
+        width: 65%;
+    }
+
+    .fairy-btn {
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .fairy-imgs img {
+        width: 97%;
+    }
+
+    .fairy-title>img:last-of-type {
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 425px) {
+  
+    .home-btn {
+        gap: 2.5rem;
+    }
+
+    .home-btn a {
+        font-size: 1.8rem;
+        letter-spacing: -.1rem;
+    }
+
+  
+
+    .home-logo-link {
+        width: 299px;
+    }
+
+    .main-videos{
+        width: 47rem;
+    }
+
+    footer div:nth-child(2) img {
+        width: 17rem;
+    }
+}
